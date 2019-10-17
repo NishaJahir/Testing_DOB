@@ -137,6 +137,7 @@ let current_date = new Date();
         return false;
 	}
 	var birthday = $("#nn_invoice_date").val() + '-' + $("#nn_invoice_month").val() + '-' + $("#nn_invoice_year").val();
+	console.log(birthday);
 	if (Date.parse(birthday) ) {
 	alert("The date format is invalid");
 	$('#novalnet_form_btn').attr('disabled',false);
