@@ -14,6 +14,14 @@ $(document).ready( function() {
         	return false;
         	}
 	});
+	$('#nn_invoice_date').on('focusout', function() {
+	var date = $('#nn_invoice_date').val();
+	if (date != '0' && date != '' && date.length < 2) {
+    	var result = "0"+ date.val(); 
+    	date.val(result);
+	}
+	});
+	
 	
 	$("#nn_invoice_year").on("keypress keyup",function (e) {		
 		var exp = String.fromCharCode(e.which);
