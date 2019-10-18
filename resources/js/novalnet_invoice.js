@@ -136,9 +136,8 @@ let current_date = new Date();
 	$('#novalnet_form_btn').attr('disabled',false);
         return false;
 	}
-	var birthday = $("#nn_invoice_date").val() + '-' + $("#nn_invoice_month").val() + '-' + $("#nn_invoice_year").val();
-	console.log(birthday);
-	if (Date.parse(birthday) ) {
+	var birthday = $("#nn_invoice_year").val() + '-' + $("#nn_invoice_month").val() + '-' + $("#nn_invoice_date").val();
+	if (!Date.parse(birthday) ) {
 	alert("The date format is invalid");
 	$('#novalnet_form_btn').attr('disabled',false);
 	return false;
